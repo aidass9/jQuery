@@ -8,13 +8,32 @@
     <title>204a</title>
 
     <style>
-        body>ul {
-            display: inline-block;
+
+        body>ul ul {
+            display: none;
         }
+        body>ul>li {
+            display: inline-block;
+            vertical-align: top;
+            
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        a {
+            background-color: lightblue;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+            color: yellow;
+            width: 100px;
+
+        }
+
     </style>
 
-    <script src="../jquery-3.2.1.min.js"></script>
-    <script src="204a.js"></script>
 </head>
 
 <body>
@@ -52,6 +71,8 @@
 
     </ul>
 
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script src="204a.js"></script>
 </body>
 
 </html>
