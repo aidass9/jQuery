@@ -9,20 +9,32 @@
     <style>
         div.rectangulo {
             background-color: tomato;
-            width: 250px;
-            height: 250px;
+            width: 100px;
+            height: 100px;
+            
+        }
+
+        div.divOculto {
+            display: none;
+            background-color: forestgreen;
+            /* width: 200px;
+            height: 200px; */
+            text-align: center;
         }
     </style>
 </head>
 <body>
     
     <h1>Ejemplo de Toggle y Effect</h1>
+    <p id="mensaje"></p>
     <button id="toggle">Toggle</button>
     <button id="effect">Effect</button>
     <div class="rectangulo"></div>
 
     <h1>Ejemplo de Add/Remove Class</h1>
     <button id="anyadirClase">Añadir clase</button>
+
+    <div class="divOculto">HOLAA</div>
 
     <script src="../jquery-3.2.1.min.js"></script>
     <script src="207a.js"></script>
