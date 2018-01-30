@@ -127,6 +127,7 @@ function botonesFinales() {
     $("#boton8").click(ponerFoto);
     $("#boton9").click(eliminarFoto);
     $("#boton10").click(ponerBorrarFoto);
+    $("#boton11").click(opacidadFoto);
 }
 
 function mostrarAlert() {
@@ -168,12 +169,36 @@ function cambiarContenidoInputText() {
 }
 
 function ponerFoto() {
-    // var foto = "<img src='./pokemon.jpg'>";
-    // $("#imagen").append(foto);
-    $("#imagen").attr("<img src='./pokemon.jpg'>");
+    var foto = "<img src='./pokemon.jpg'>";
+    $("#imagen").append(foto);
+    // $("#imagen").attr("<img src='./pokemon.jpg'>");
 }
 
 function eliminarFoto() {
-    $("#imagen").remove();
+    $("#imagen img").remove();
 }
 
+function ponerBorrarFoto() {
+    if ($("#imagen img").length === 0) {
+        ponerFoto();
+    }
+    else {
+        eliminarFoto();
+    }
+}
+
+function opacidadFoto() {
+    if ($("#imagen img").length === 0) {
+        ponerFoto();
+    }
+    else {
+
+        if ($("#imagen img").css("opacity") === "1") {
+            $("#imagen img").css("opacity", "0");
+        }
+        else {
+            $("#imagen img").css("opacity", "1");
+            
+        }
+    }
+}
